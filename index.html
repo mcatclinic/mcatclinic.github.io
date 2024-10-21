@@ -4,46 +4,109 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MCAT Clinic</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #eef2f3;
             color: #333;
         }
         header {
-            background: #0077cc;
+            background: linear-gradient(to right, #ff6a00, #ee0979);
             color: white;
-            padding: 20px 0;
+            padding: 80px 0;
             text-align: center;
+            position: relative;
+        }
+        header h1 {
+            font-size: 3.5em;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        header p {
+            font-size: 1.5em;
+            margin: 10px 0 0;
+        }
+        nav {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #ffcc00;
+        }
+        .logo {
+            width: 100px;
+            height: auto;
+            margin-bottom: 20px;
         }
         .container {
             width: 80%;
-            margin: 0 auto;
+            margin: 20px auto;
             overflow: hidden;
         }
-        h1 {
-            margin: 0;
-        }
         section {
-            padding: 20px;
+            padding: 30px;
             background: white;
             margin: 20px 0;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #ff6a00;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #ee0979;
+            padding-bottom: 5px;
+        }
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
         }
         a.button {
             display: inline-block;
-            padding: 10px 20px;
+            padding: 15px 30px;
             color: white;
-            background: #28a745;
+            background: #1e90ff;
             text-decoration: none;
             border-radius: 5px;
+            font-weight: 700;
             transition: background 0.3s;
         }
         a.button:hover {
-            background: #218838;
+            background: #00aaff;
+        }
+        .testimonials {
+            background: #f7f7f7;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        .testimonial {
+            font-style: italic;
+            margin: 10px 0;
+            color: #555;
         }
         footer {
             text-align: center;
@@ -59,22 +122,39 @@
 <body>
 
 <header>
-    <div class="container">
-        <h1>Welcome to MCAT Clinic</h1>
-        <p>Your partner in MCAT preparation</p>
-    </div>
+    <nav>
+        <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <img src="logo-placeholder.png" alt="MCAT Clinic Logo" class="logo">
+    <h1>Welcome to MCAT Clinic</h1>
+    <p>Your Partner in MCAT Preparation</p>
 </header>
 
 <div class="container">
-    <section>
+    <section id="about">
         <h2>About Us</h2>
         <p>At MCAT Clinic, we are dedicated to helping you excel in your MCAT preparation. Our experienced tutors provide personalized guidance tailored to your unique learning needs. Whether you're just starting your study journey or need a final review, we're here to support you every step of the way.</p>
     </section>
 
-    <section>
+    <section id="services">
+        <h2>Our Services</h2>
+        <p>We offer a variety of tutoring options, including:</p>
+        <ul>
+            <li>One-on-one tutoring sessions</li>
+            <li>Group study sessions</li>
+            <li>Online resources and practice tests</li>
+            <li>Personalized study plans</li>
+        </ul>
+    </section>
+
+    <section id="contact">
         <h2>Get Started</h2>
         <p>Ready to take the next step? Fill out our contact form, and one of our tutors will get in touch with you shortly!</p>
-        <a href="contact_form.html" class="button">Fill Out Form</a>
+        <a href="https://forms.gle/o1Sof566pHTfH4cm7" class="button">Fill Out the Form</a>
     </section>
 </div>
 
